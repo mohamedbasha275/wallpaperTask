@@ -1,16 +1,17 @@
 # wallpaper_app
 
-A new Flutter project.
+A new Flutter project
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project consists of:
+■ Home Screen: Contains random wallpapers in a grid view.
+■ Search Screen: Includes Input field and the results of wallpapers
+searched for
+■ Wallpaper Details Screen: Includes the selected wallpaper filled the
+screen, and a download button to download the wallpaper. Also, it
+should have a favorites button, to add the wallpaper to the favorite
+screen
+■ Favorite Screen: Contains a group of favorite wallpapers
+■ Use Pexels API for wallpapers data
+■ Used Cubit as it more suitable
+■ Favorite wallpapers be stored in a local database using SQFLITE
