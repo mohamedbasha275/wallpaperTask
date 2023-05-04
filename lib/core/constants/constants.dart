@@ -1,0 +1,1 @@
+String appCurrency = 'E.L';
