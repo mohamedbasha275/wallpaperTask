@@ -81,9 +81,10 @@ class DownLoadBtn extends StatelessWidget {
             message: '${AppStrings.failedDownload} ${e.toString()}',
             bgColor: AppColors.failure,
           );
-        } finally {
-          Navigator.of(context, rootNavigator: true).pop();
         }
+        // finally {
+        //   //Navigator.of(context, rootNavigator: true).pop();
+        // }
       },
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.primary,

@@ -63,9 +63,11 @@ class _WallpaperDetailsScreenState extends State<WallpaperDetailsScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      // download btn
                       DownLoadBtn(
-                          id: widget.wallpaper.id,
-                          url: widget.wallpaper.largeImage),
+                        id: widget.wallpaper.id,
+                        url: widget.wallpaper.largeImage,
+                      ),
                       const SizedBox(width: AppSize.s16),
                       FutureBuilder<bool>(
                         future: _getIsInFavourite(context),
@@ -77,13 +79,18 @@ class _WallpaperDetailsScreenState extends State<WallpaperDetailsScreen> {
                             return ElevatedButton(
                               onPressed: () async {
                                 if (isInFavourite) {
-                                  await BlocProvider.of<FavouritesCubit>(context)
-                                      .removeFavourites(id: widget.wallpaper.id);
+                                  await BlocProvider.of<FavouritesCubit>(
+                                          context)
+                                      .removeFavourites(
+                                          id: widget.wallpaper.id);
                                 } else {
-                                  await BlocProvider.of<FavouritesCubit>(context)
-                                      .addFavourites(wallpaper: widget.wallpaper);
+                                  await BlocProvider.of<FavouritesCubit>(
+                                          context)
+                                      .addFavourites(
+                                          wallpaper: widget.wallpaper);
                                 }
-                                setState(() { // update the state of the widget
+                                setState(() {
+                                  // update the state of the widget
                                   isInFavourite = !isInFavourite;
                                 });
                               },
